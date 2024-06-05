@@ -1,0 +1,8 @@
+<div *ngIf="todo">
+    <h3>Détails de la tâche</h3>
+    <p><strong>Title:</strong> {{ todo.title }}</p>
+    <p><strong>Completed:</strong> {{ todo.completed }}</p>
+    <button (click)="goBack()">Revenir à la liste des tâches</button>
+  </div>
+  <p *ngIf="!todo">Chargement...</p>
+  

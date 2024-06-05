@@ -1,0 +1,11 @@
+<h3>{{ title }}</h3>
+<button (click)="toggleListVisibility()">
+  {{ isListVisible ? 'Cacher' : 'Afficher' }} la liste
+</button>
+<ul *ngIf="isListVisible && users && users.length > 0">
+  <li *ngFor="let user of users">
+    <strong>{{ user.name | uppercase }}</strong><br>
+    <span>{{ user.email }}</span>
+  </li>
+</ul>
+<p *ngIf="isListVisible && (!users || users.length === 0)">Aucune donnée disponible.</p>
